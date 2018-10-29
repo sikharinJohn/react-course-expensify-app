@@ -1,0 +1,42 @@
+Arguments: 
+  /Users/sikharinjohn/.nvm/versions/node/v10.8.0/bin/node /Users/sikharinjohn/.nvm/versions/node/v10.8.0/bin/yarn add babel-present-react@6.24.1 babel-present-env@1.5.2
+
+PATH: 
+  /Users/sikharinjohn/.nvm/versions/node/v10.8.0/bin:/usr/local/mysql/bin:/Users/sikharinjohn/.rbenv/shims:/Users/sikharinjohn/.rbenv/shims:/Users/sikharinjohn/.rbenv/shims:/Users/sikharinjohn/.rbenv/shims:/Users/sikharinjohn/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mongodb/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.8.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/babel-present-react: Not found
+      at Request.params.callback [as _callback] (/Users/sikharinjohn/.nvm/versions/node/v10.8.0/lib/node_modules/yarn/lib/cli.js:61073:18)
+      at Request.self.callback (/Users/sikharinjohn/.nvm/versions/node/v10.8.0/lib/node_modules/yarn/lib/cli.js:120166:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/Users/sikharinjohn/.nvm/versions/node/v10.8.0/lib/node_modules/yarn/lib/cli.js:121138:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/Users/sikharinjohn/.nvm/versions/node/v10.8.0/lib/node_modules/yarn/lib/cli.js:121060:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1081:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "indecision-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Sikharin Wande",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
