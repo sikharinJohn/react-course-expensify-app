@@ -1,3 +1,18 @@
+#Git commands
+git init - Create a new git repo
+git status - View the changes to your project code
+git add - Add files to staging area
+git commit - Creates a new commit with files from staging area
+git log - View recent commits
+
+ git remote add origin git@github.com:sikharinJohn/react-course-expensify-app.git
+
+ ls -a ~/.ssh
+ssh-add -K ~/.ssh/github_rsa
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+
 #Babel to compile javascript 
 
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
