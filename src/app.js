@@ -34,6 +34,7 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) =>{
     if (user){
+        console.log('user', user);
         console.log('uid', user.uid);
         store.dispatch(login(user.uid));
 
