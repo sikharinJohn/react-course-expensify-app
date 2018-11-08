@@ -1,0 +1,17 @@
+.custom-ui {
+    background: $blue;
+    color: $off-white;
+    padding: $l-size;
+    text-align: center;
+    width: 500px;
+
+    button {
+        background: none;
+        border: 1px solid $off-white;
+        color: $off-white;
+        cursor: pointer;
+        margin: $m-size;;
+        padding: $s-size;
+        width: 160px;
+    }
+}

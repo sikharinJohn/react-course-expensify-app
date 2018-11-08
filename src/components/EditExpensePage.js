@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
+import { confirmAlert } from 'react-confirm-alert';
 import { editExpense, startRemoveExpense, startEditExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
@@ -11,9 +12,23 @@ export class EditExpensePage extends React.Component {
     };
 
     onRemove = () => {
-        this.props.startRemoveExpense({ id: this.props.expense.id });
-        this.props.history.push('/');
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='custom-ui'>
+                        <p>You want to remove this expense?</p>
+                        <button onClick={() => {
+                            this.props.startRemoveExpense({ id: this.props.expense.id });
+                            this.props.history.push('/');
+                            onClose()
+                        }}>Yes</button>
+                        <button onClick={onClose}>No</button>
+                    </div>
+                )
+            }
+        });
     };
+
 
     render() {
         return (
@@ -31,6 +46,7 @@ export class EditExpensePage extends React.Component {
                         onSubmit={this.onSubmit}
                     />
                     <button className="button button--secondary " onClick={this.onRemove}>Remove Expense</button>
+
                 </div>
 
             </div>
