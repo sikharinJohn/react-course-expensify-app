@@ -20,3 +20,10 @@
   margin: 0 0 $m-size 0;
   line-height: 1;
 }
+
+.box-layout__login {
+  display: flex;
+  flex-flow: column;
+  height: 10vh;
+  justify-content: space-between;
+}
