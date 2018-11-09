@@ -12,6 +12,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import ConfirmModal from './components/ConfirmModal';
+import DropdownList from './components/DropdownList';
 
 const store = configureStore();
 
@@ -22,6 +23,17 @@ const jsx = (
     </Provider>
 );
 
+
+
+// const handleChange = (selectedOption) => {
+
+//     console.log(`Option selected:`, selectedOption.value);
+// }
+
+// ReactDOM.render(<DropdownList
+//     options={options}
+//     handleChange={handleChange}
+// />, document.getElementById('app'));
 let hasRendered = false;
 const renderApp = () => {
     if (!hasRendered) {

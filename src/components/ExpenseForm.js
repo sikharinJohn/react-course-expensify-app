@@ -1,12 +1,14 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+import DropdownList from './DropdownList';
 
 export default class ExpenseForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             description: props.expense ? props.expense.description : '',
+            type: props.expense ? props.expense.type : '',
             note: props.expense ? props.expense.note : '',
             amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
@@ -19,6 +21,12 @@ export default class ExpenseForm extends React.Component {
         const description = e.target.value;
         this.setState(() => ({ description }));
     };
+
+    onTypeChange = (selectedOption) => {
+        const type = selectedOption.value;
+        this.setState(() => ({ type }));
+    }
+    
     onNoteChange = (e) => {
         const note = e.target.value;
         this.setState(() => ({ note }));
@@ -47,6 +55,7 @@ export default class ExpenseForm extends React.Component {
             this.setState(() => ({ error: '' }));
             this.props.onSubmit({
                 description: this.state.description,
+                type: this.state.type,
                 amount: parseFloat(this.state.amount, 10) * 100,
                 createdAt: this.state.createdAt.valueOf(),
                 note: this.state.note
@@ -64,6 +73,12 @@ export default class ExpenseForm extends React.Component {
                     className="text-input"
                     value={this.state.description}
                     onChange={this.onDescriptionChange}
+                />
+                <DropdownList 
+                    options={this.props.options}
+                    value={this.state.type}
+                    handleChange={this.onTypeChange}
+                    selectedValue={this.state.type}
                 />
                 <input
                     type="text"
