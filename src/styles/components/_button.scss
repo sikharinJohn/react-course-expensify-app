@@ -17,3 +17,13 @@
 .button--secondary {
   background: #888;
 }
+
+.button--third {
+  background: none;
+  border: 1px solid $off-white;
+  color: $off-white;
+  cursor: pointer;
+  margin: $m-size;;
+  padding: $s-size;
+  width: 160px;
+}
