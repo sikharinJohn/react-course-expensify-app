@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import DropdownList from './DropdownList';
+import types from '../models/expense-types';
 
 export default class ExpenseForm extends React.Component {
     constructor(props) {
@@ -75,7 +76,7 @@ export default class ExpenseForm extends React.Component {
                     onChange={this.onDescriptionChange}
                 />
                 <DropdownList 
-                    options={this.props.options}
+                    types={types}
                     value={this.state.type}
                     handleChange={this.onTypeChange}
                     selectedValue={this.state.type}

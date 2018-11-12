@@ -16,6 +16,46 @@ exports[`should render ExpenseForm correctly 1`] = `
   <DropdownList
     handleChange={[Function]}
     selectedValue=""
+    types={
+      Array [
+        Object {
+          "label": "Food",
+          "value": "Food",
+        },
+        Object {
+          "label": "Transport",
+          "value": "Transport",
+        },
+        Object {
+          "label": "House",
+          "value": "House",
+        },
+        Object {
+          "label": "Internet",
+          "value": "Internet",
+        },
+        Object {
+          "label": "Electric",
+          "value": "Electric",
+        },
+        Object {
+          "label": "Water",
+          "value": "Water",
+        },
+        Object {
+          "label": "Gift",
+          "value": "Gift",
+        },
+        Object {
+          "label": "Donate",
+          "value": "Donate",
+        },
+        Object {
+          "label": "Other",
+          "value": "Other",
+        },
+      ]
+    }
     value=""
   />
   <input
@@ -132,6 +172,46 @@ exports[`should render ExpenseForm with expense data 1`] = `
   />
   <DropdownList
     handleChange={[Function]}
+    types={
+      Array [
+        Object {
+          "label": "Food",
+          "value": "Food",
+        },
+        Object {
+          "label": "Transport",
+          "value": "Transport",
+        },
+        Object {
+          "label": "House",
+          "value": "House",
+        },
+        Object {
+          "label": "Internet",
+          "value": "Internet",
+        },
+        Object {
+          "label": "Electric",
+          "value": "Electric",
+        },
+        Object {
+          "label": "Water",
+          "value": "Water",
+        },
+        Object {
+          "label": "Gift",
+          "value": "Gift",
+        },
+        Object {
+          "label": "Donate",
+          "value": "Donate",
+        },
+        Object {
+          "label": "Other",
+          "value": "Other",
+        },
+      ]
+    }
   />
   <input
     className="text-input"
@@ -254,6 +334,46 @@ exports[`should render error for invalid form submission 1`] = `
   <DropdownList
     handleChange={[Function]}
     selectedValue=""
+    types={
+      Array [
+        Object {
+          "label": "Food",
+          "value": "Food",
+        },
+        Object {
+          "label": "Transport",
+          "value": "Transport",
+        },
+        Object {
+          "label": "House",
+          "value": "House",
+        },
+        Object {
+          "label": "Internet",
+          "value": "Internet",
+        },
+        Object {
+          "label": "Electric",
+          "value": "Electric",
+        },
+        Object {
+          "label": "Water",
+          "value": "Water",
+        },
+        Object {
+          "label": "Gift",
+          "value": "Gift",
+        },
+        Object {
+          "label": "Donate",
+          "value": "Donate",
+        },
+        Object {
+          "label": "Other",
+          "value": "Other",
+        },
+      ]
+    }
     value=""
   />
   <input

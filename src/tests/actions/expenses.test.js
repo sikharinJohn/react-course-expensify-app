@@ -95,7 +95,8 @@ test('should add expense to database and store', (done) => {
         description: 'Mouse',
         amount: 3000,
         note: 'This one is better',
-        createdAt: 1000
+        createdAt: 1000,
+        type: 'Gift'
     };
 
     store.dispatch(startAddExpense(expenseData)).then(() => {
@@ -120,7 +121,8 @@ test('should add expense with defaults to database and store', (done) => {
         description: '',
         note: '',
         amount: 0,
-        createdAt: 0
+        createdAt: 0,
+        type: ''
     };
 
     store.dispatch(startAddExpense({})).then(() => {

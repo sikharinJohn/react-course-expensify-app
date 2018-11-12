@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DropdownList correctly 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  options={
+    Array [
+      Object {
+        "label": "Food",
+        "value": "Food",
+      },
+      Object {
+        "label": "Transport",
+        "value": "Transport",
+      },
+      Object {
+        "label": "House",
+        "value": "House",
+      },
+      Object {
+        "label": "Internet",
+        "value": "Internet",
+      },
+      Object {
+        "label": "Electric",
+        "value": "Electric",
+      },
+      Object {
+        "label": "Water",
+        "value": "Water",
+      },
+      Object {
+        "label": "Gift",
+        "value": "Gift",
+      },
+      Object {
+        "label": "Donate",
+        "value": "Donate",
+      },
+      Object {
+        "label": "Other",
+        "value": "Other",
+      },
+    ]
+  }
+  value={
+    Object {
+      "label": undefined,
+      "value": undefined,
+    }
+  }
+/>
+`;
