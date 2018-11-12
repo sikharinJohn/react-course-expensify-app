@@ -22,8 +22,8 @@ export default class ExpenseForm extends React.Component {
         this.setState(() => ({ description }));
     };
 
-    onTypeChange = (selectedOption) => {
-        const type = selectedOption.value;
+    onTypeChange = (selectedType) => {
+        const type = selectedType.value;
         this.setState(() => ({ type }));
     }
     

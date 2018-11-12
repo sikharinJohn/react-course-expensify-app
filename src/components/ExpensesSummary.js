@@ -14,7 +14,7 @@ export const ExpensesSummary = ({ expensesCount, expensesTotal, hiddenCount }) =
         <div className="page-header">
             <div className="content-container">
                 <h1 className="page-header__title"> Viewing <span>{expensesCount}</span> {expenseWord} totalling <span>{formattedExpensesTotal}</span></h1>
-                { hiddenCount > 0 ? <h2 className="page-header__title"> Not show <span>{hiddenCount}</span> {hiddenWord} because of filters</h2> : '' }
+                { hiddenCount > 0 ? <h2 className="page-header__title"> Hidden <span>{hiddenCount}</span> {hiddenWord} by filters</h2> : '' }
                 <div className="page-header__actions">
                     <Link className="button" to="/create">Add Expense</Link>
                 </div>

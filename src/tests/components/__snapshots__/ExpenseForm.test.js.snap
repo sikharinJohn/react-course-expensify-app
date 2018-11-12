@@ -13,6 +13,11 @@ exports[`should render ExpenseForm correctly 1`] = `
     type="text"
     value=""
   />
+  <DropdownList
+    handleChange={[Function]}
+    selectedValue=""
+    value=""
+  />
   <input
     className="text-input"
     onChange={[Function]}
@@ -124,6 +129,9 @@ exports[`should render ExpenseForm with expense data 1`] = `
     placeholder="Description"
     type="text"
     value="Gum"
+  />
+  <DropdownList
+    handleChange={[Function]}
   />
   <input
     className="text-input"
@@ -241,6 +249,11 @@ exports[`should render error for invalid form submission 1`] = `
     onChange={[Function]}
     placeholder="Description"
     type="text"
+    value=""
+  />
+  <DropdownList
+    handleChange={[Function]}
+    selectedValue=""
     value=""
   />
   <input
