@@ -23,7 +23,11 @@ exports[`should render Header correctly 1`] = `
         className="button button--link"
         onClick={[Function]}
       >
-        Logout
+        <FormattedMessage
+          defaultMessage="logout"
+          id="header.logout"
+          values={Object {}}
+        />
       </button>
     </div>
   </div>

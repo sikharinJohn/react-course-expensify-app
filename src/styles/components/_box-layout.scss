@@ -24,6 +24,10 @@
 .box-layout__login {
   display: flex;
   flex-flow: column;
-  height: 10vh;
+  height: 15vh;
   justify-content: space-between;
+
+  @media (min-width: $desktop-breakpoint) {
+    height: 10vh;
+  }
 }

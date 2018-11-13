@@ -51,11 +51,11 @@ exports[`should render EditExpensePage correctly 1`] = `
     <div
       className="content-container"
     >
-      <h1
-        className="page-header__title"
-      >
-        Edit Expense
-      </h1>
+      <FormattedMessage
+        defaultMessage="Edit Expense"
+        id="expense-edit"
+        values={Object {}}
+      />
     </div>
   </div>
   <div
@@ -73,11 +73,11 @@ exports[`should render EditExpensePage correctly 1`] = `
       }
       onSubmit={[Function]}
     />
-    <button
-      className="button button--secondary "
-    >
-      Remove Expense
-    </button>
+    <FormattedMessage
+      defaultMessage="Remove Expense"
+      id="expense-remove.button"
+      values={Object {}}
+    />
   </div>
   <ConfirmModal
     handleConfirmModal={[Function]}

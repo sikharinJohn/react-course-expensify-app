@@ -17,23 +17,21 @@ exports[`should close ConfirmModal correctly 1`] = `
   shouldFocusAfterRender={true}
   shouldReturnFocusAfterClose={true}
 >
-  <h3
-    className="modal__title"
-  >
-    You want to remove this expense?
-  </h3>
-  <button
-    className="button button--third"
-    onClick={[Function]}
-  >
-    Yes
-  </button>
-  <button
-    className="button button--third"
-    onClick={[Function]}
-  >
-    No
-  </button>
+  <FormattedMessage
+    defaultMessage="You want to remove this expense?"
+    id="exepense-remove.title"
+    values={Object {}}
+  />
+  <FormattedMessage
+    defaultMessage="Yes"
+    id="modal.yes"
+    values={Object {}}
+  />
+  <FormattedMessage
+    defaultMessage="No"
+    id="modal.no"
+    values={Object {}}
+  />
 </Modal>
 `;
 
@@ -54,25 +52,23 @@ exports[`should render ConfirmModal correctly 1`] = `
   shouldFocusAfterRender={true}
   shouldReturnFocusAfterClose={true}
 >
-  <h3
-    className="modal__title"
-  >
-    You want to remove this expense?
-  </h3>
+  <FormattedMessage
+    defaultMessage="You want to remove this expense?"
+    id="exepense-remove.title"
+    values={Object {}}
+  />
   <p
     className="modal__body"
   />
-  <button
-    className="button button--third"
-    onClick={[Function]}
-  >
-    Yes
-  </button>
-  <button
-    className="button button--third"
-    onClick={[Function]}
-  >
-    No
-  </button>
+  <FormattedMessage
+    defaultMessage="Yes"
+    id="modal.yes"
+    values={Object {}}
+  />
+  <FormattedMessage
+    defaultMessage="No"
+    id="modal.no"
+    values={Object {}}
+  />
 </Modal>
 `;

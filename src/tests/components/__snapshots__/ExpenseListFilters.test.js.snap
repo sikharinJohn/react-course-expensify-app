@@ -10,12 +10,9 @@ exports[`should render ExpenseListFilters correctly 1`] = `
     <div
       className="input-group__item"
     >
-      <input
-        className="text-input"
-        onChange={[Function]}
-        placeholder="Search expenses"
-        type="text"
-        value=""
+      <FormattedMessage
+        id="filters.search.expenses"
+        values={Object {}}
       />
     </div>
     <div
@@ -26,16 +23,14 @@ exports[`should render ExpenseListFilters correctly 1`] = `
         onChange={[Function]}
         value="date"
       >
-        <option
-          value="date"
-        >
-          Date
-        </option>
-        <option
-          value="amount"
-        >
-          Amount
-        </option>
+        <FormattedMessage
+          id="filters.date"
+          values={Object {}}
+        />
+        <FormattedMessage
+          id="filters.amount"
+          values={Object {}}
+        />
       </select>
     </div>
     <div
@@ -139,12 +134,9 @@ exports[`should render ExpenseListFilters with alt data correctly 1`] = `
     <div
       className="input-group__item"
     >
-      <input
-        className="text-input"
-        onChange={[Function]}
-        placeholder="Search expenses"
-        type="text"
-        value="bills"
+      <FormattedMessage
+        id="filters.search.expenses"
+        values={Object {}}
       />
     </div>
     <div
@@ -155,16 +147,14 @@ exports[`should render ExpenseListFilters with alt data correctly 1`] = `
         onChange={[Function]}
         value="amount"
       >
-        <option
-          value="date"
-        >
-          Date
-        </option>
-        <option
-          value="amount"
-        >
-          Amount
-        </option>
+        <FormattedMessage
+          id="filters.date"
+          values={Object {}}
+        />
+        <FormattedMessage
+          id="filters.amount"
+          values={Object {}}
+        />
       </select>
     </div>
     <div

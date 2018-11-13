@@ -5,13 +5,10 @@ exports[`should render ExpenseForm correctly 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <input
-    autoFocus={true}
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Description"
-    type="text"
-    value=""
+  <FormattedMessage
+    defaultMessage="Description"
+    id="expense-form.description"
+    values={Object {}}
   />
   <DropdownList
     handleChange={[Function]}
@@ -58,12 +55,10 @@ exports[`should render ExpenseForm correctly 1`] = `
     }
     value=""
   />
-  <input
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Amount"
-    type="text"
-    value=""
+  <FormattedMessage
+    defaultMessage="Amount"
+    id="expense-form.amount"
+    values={Object {}}
   />
   <SingleDatePicker
     anchorDirection="left"
@@ -141,18 +136,17 @@ exports[`should render ExpenseForm correctly 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-  <textarea
-    className="textarea"
-    onChange={[Function]}
-    placeholder="Add a note for your expense (optional)"
-    value=""
+  <FormattedMessage
+    defaultMessage="Add a note for your expense (optional)"
+    id="expense-form.note"
+    values={Object {}}
   />
   <div>
-    <button
-      className="button"
-    >
-      Add Expense
-    </button>
+    <FormattedMessage
+      defaultMessage="Add Expense"
+      id="expense-add.button"
+      values={Object {}}
+    />
   </div>
 </form>
 `;
@@ -162,13 +156,10 @@ exports[`should render ExpenseForm with expense data 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <input
-    autoFocus={true}
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Description"
-    type="text"
-    value="Gum"
+  <FormattedMessage
+    defaultMessage="Description"
+    id="expense-form.description"
+    values={Object {}}
   />
   <DropdownList
     handleChange={[Function]}
@@ -213,12 +204,10 @@ exports[`should render ExpenseForm with expense data 1`] = `
       ]
     }
   />
-  <input
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Amount"
-    type="text"
-    value="1.95"
+  <FormattedMessage
+    defaultMessage="Amount"
+    id="expense-form.amount"
+    values={Object {}}
   />
   <SingleDatePicker
     anchorDirection="left"
@@ -296,18 +285,17 @@ exports[`should render ExpenseForm with expense data 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-  <textarea
-    className="textarea"
-    onChange={[Function]}
-    placeholder="Add a note for your expense (optional)"
-    value=""
+  <FormattedMessage
+    defaultMessage="Add a note for your expense (optional)"
+    id="expense-form.note"
+    values={Object {}}
   />
   <div>
-    <button
-      className="button"
-    >
-      Add Expense
-    </button>
+    <FormattedMessage
+      defaultMessage="Add Expense"
+      id="expense-add.button"
+      values={Object {}}
+    />
   </div>
 </form>
 `;
@@ -317,19 +305,15 @@ exports[`should render error for invalid form submission 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <p
-    className="form__error"
-  >
-     
-    Please provide description and amount.
-  </p>
-  <input
-    autoFocus={true}
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Description"
-    type="text"
-    value=""
+  <FormattedMessage
+    defaultMessage="expense-form.invalid"
+    id="expense-form.invalid"
+    values={Object {}}
+  />
+  <FormattedMessage
+    defaultMessage="Description"
+    id="expense-form.description"
+    values={Object {}}
   />
   <DropdownList
     handleChange={[Function]}
@@ -376,12 +360,10 @@ exports[`should render error for invalid form submission 1`] = `
     }
     value=""
   />
-  <input
-    className="text-input"
-    onChange={[Function]}
-    placeholder="Amount"
-    type="text"
-    value=""
+  <FormattedMessage
+    defaultMessage="Amount"
+    id="expense-form.amount"
+    values={Object {}}
   />
   <SingleDatePicker
     anchorDirection="left"
@@ -459,18 +441,17 @@ exports[`should render error for invalid form submission 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-  <textarea
-    className="textarea"
-    onChange={[Function]}
-    placeholder="Add a note for your expense (optional)"
-    value=""
+  <FormattedMessage
+    defaultMessage="Add a note for your expense (optional)"
+    id="expense-form.note"
+    values={Object {}}
   />
   <div>
-    <button
-      className="button"
-    >
-      Add Expense
-    </button>
+    <FormattedMessage
+      defaultMessage="Add Expense"
+      id="expense-add.button"
+      values={Object {}}
+    />
   </div>
 </form>
 `;

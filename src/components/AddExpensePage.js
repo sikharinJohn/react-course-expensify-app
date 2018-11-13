@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 import ExpenseForm from './ExpenseForm';
 import { startAddExpense } from '../actions/expenses';
-import types from '../models/expense-types';
 
 export class AddExpensePage extends React.Component {
     onSubmit = (expense) => {
@@ -15,7 +15,11 @@ export class AddExpensePage extends React.Component {
             <div>
                 <div className="page-header">
                     <div className="content-container">
-                        <h1 className="page-header__title">Add Expense</h1>
+                    <FormattedMessage id="expense-add.button" defaultMessage="Add Expense">
+                        {(txt) => (
+                            <h1 className="page-header__title">{txt}</h1>
+                        )}
+                    </FormattedMessage>
                     </div>
                 </div>
                 <div className="content-container">

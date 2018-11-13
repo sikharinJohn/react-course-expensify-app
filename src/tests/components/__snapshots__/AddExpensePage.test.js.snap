@@ -8,11 +8,11 @@ exports[`should render AddExpensePage correctly 1`] = `
     <div
       className="content-container"
     >
-      <h1
-        className="page-header__title"
-      >
-        Add Expense
-      </h1>
+      <FormattedMessage
+        defaultMessage="Add Expense"
+        id="expense-add.button"
+        values={Object {}}
+      />
     </div>
   </div>
   <div

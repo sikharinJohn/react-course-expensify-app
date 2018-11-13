@@ -7,20 +7,16 @@ exports[`should render ExpensesSummary correctly with 1 expense 1`] = `
   <div
     className="content-container"
   >
-    <h1
-      className="page-header__title"
-    >
-       Viewing 
-      <span>
-        1
-      </span>
-       
-      expense
-       totalling 
-      <span>
-        $2.35
-      </span>
-    </h1>
+    <FormattedMessage
+      defaultMessage="Viewing {expensesCount} {expensesCount, plural, one {expense} other {expenses} } totalling {expensesTotal}"
+      id="summary.text"
+      values={
+        Object {
+          "expensesCount": 1,
+          "expensesTotal": "$2.35",
+        }
+      }
+    />
     <div
       className="page-header__actions"
     >
@@ -29,7 +25,11 @@ exports[`should render ExpensesSummary correctly with 1 expense 1`] = `
         replace={false}
         to="/create"
       >
-        Add Expense
+        <FormattedMessage
+          defaultMessage="Add Expense"
+          id="summary.add-button"
+          values={Object {}}
+        />
       </Link>
     </div>
   </div>
@@ -43,20 +43,16 @@ exports[`should render ExpensesSummary correctly with multiple expenses 1`] = `
   <div
     className="content-container"
   >
-    <h1
-      className="page-header__title"
-    >
-       Viewing 
-      <span>
-        2
-      </span>
-       
-      expenses
-       totalling 
-      <span>
-        $3.35
-      </span>
-    </h1>
+    <FormattedMessage
+      defaultMessage="Viewing {expensesCount} {expensesCount, plural, one {expense} other {expenses} } totalling {expensesTotal}"
+      id="summary.text"
+      values={
+        Object {
+          "expensesCount": 2,
+          "expensesTotal": "$3.35",
+        }
+      }
+    />
     <div
       className="page-header__actions"
     >
@@ -65,7 +61,11 @@ exports[`should render ExpensesSummary correctly with multiple expenses 1`] = `
         replace={false}
         to="/create"
       >
-        Add Expense
+        <FormattedMessage
+          defaultMessage="Add Expense"
+          id="summary.add-button"
+          values={Object {}}
+        />
       </Link>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { FormattedMessage } from 'react-intl';
 
 const ConfirmModal = (props) => (
     <Modal
@@ -9,10 +10,26 @@ const ConfirmModal = (props) => (
         closeTimeoutMS={200}
         className="modal"
     >
-        <h3 className="modal__title">{props.title}</h3>
+        <FormattedMessage id="exepense-remove.title" defaultMessage="You want to remove this expense?">
+            {(txt) => (
+                <h3 className="modal__title">{txt}</h3>
+            )}
+        </FormattedMessage>
         {props.openedModal && <p className="modal__body">{props.openedModal}</p>}
-        <button className="button button--third" onClick={props.handleConfirmModal}>Yes</button>
-        <button className="button button--third" onClick={props.handleCloseModal}>No</button>
+        <FormattedMessage id="modal.yes" defaultMessage="Yes">
+            {(txt) => (
+                <button className="button button--third" onClick={props.handleConfirmModal}>{txt}</button>
+            )}
+        </FormattedMessage>
+
+        <FormattedMessage id="modal.no" defaultMessage="No">
+            {(txt) => (
+                <button className="button button--third" onClick={props.handleCloseModal}>{txt}</button>
+            )}
+        </FormattedMessage>
+
+
+
     </Modal>
 );
 

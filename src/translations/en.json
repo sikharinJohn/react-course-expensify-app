@@ -1,0 +1,25 @@
+{
+    "header.logout": "Logout",
+    "summary.add-button": "Add Expense",
+    "summary.text": "Viewing {expensesCount}  {expensesCount, plural, one {expense} other {expenses} } totalling {expensesTotal}",
+    "summary.text-hidden": "Hidden {hiddenCount} {hiddenCount, plural, one {expense} other {expenses} } by filters",
+    "filters.search.expenses": "Search expenses",
+    "filters.date": "Date",
+    "filters.amount": "Amount",
+    "expense-list.expenses": "Expenses",
+    "expense-list.expense": "Expense",
+    "expense-list.amount": "Amount",
+    "expense-list.emtry": "No Expense",
+    "expense-add.button": "Add Expense",
+    "expense-form.description": "Description",
+    "expense-form.amount": "Amount",
+    "expense-form.note": "Add a note for your expense (optional)",
+    "expense-form.invalid": "Please provide description and amount.",
+    "expense-edit": "Edit Expense",
+    "expense-remove.button": "Remove Expense",
+    "exepense-remove.title": "You want to remove this expense?",
+    "modal.yes": "Yes",
+    "modal.no": "No"
+
+    
+}

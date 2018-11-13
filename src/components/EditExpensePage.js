@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 import ExpenseForm from './ExpenseForm';
 import ConfirmModal from './ConfirmModal';
 import { editExpense, startRemoveExpense, startEditExpense } from '../actions/expenses';
-import { openModal, closeModal} from '../actions/modal';
+import { openModal, closeModal } from '../actions/modal';
 
 export class EditExpensePage extends React.Component {
 
@@ -23,7 +24,12 @@ export class EditExpensePage extends React.Component {
             <div>
                 <div className="page-header">
                     <div className="content-container">
-                        <h1 className="page-header__title">Edit Expense</h1>
+                        <FormattedMessage id="expense-edit" defaultMessage="Edit Expense">
+                            {(txt) => (
+                                <h1 className="page-header__title">{txt}</h1>
+                            )}
+                        </FormattedMessage>
+
                     </div>
                 </div>
                 <div className="content-container">
@@ -32,7 +38,11 @@ export class EditExpensePage extends React.Component {
                         expense={this.props.expense}
                         onSubmit={this.onSubmit}
                     />
-                    <button className="button button--secondary " onClick={this.props.openModal}>Remove Expense</button>
+                    <FormattedMessage id="expense-remove.button" defaultMessage="Remove Expense">
+                        {(txt) => (
+                            <button className="button button--secondary " onClick={this.props.openModal}>{txt}</button>
+                        )}
+                    </FormattedMessage>
                 </div>
                 <ConfirmModal
                     title="You want to remove this expense?"

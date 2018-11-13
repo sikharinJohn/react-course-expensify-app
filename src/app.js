@@ -1,39 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
-import getVisibleExpense from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
-import ConfirmModal from './components/ConfirmModal';
-import DropdownList from './components/DropdownList';
+import App from './components/App';
+
 
 const store = configureStore();
-
-const state = store.getState();
 const jsx = (
-    <Provider store={store}>
-        <AppRouter />
-    </Provider>
+   <App store={store} />
 );
 
-
-
-// const handleChange = (selectedOption) => {
-
-//     console.log(`Option selected:`, selectedOption.value);
-// }
-
-// ReactDOM.render(<DropdownList
-//     options={options}
-//     handleChange={handleChange}
-// />, document.getElementById('app'));
 let hasRendered = false;
 const renderApp = () => {
     if (!hasRendered) {
@@ -51,9 +33,14 @@ firebase.auth().onAuthStateChanged((user) => {
 
         store.dispatch(startSetExpenses()).then(() => {
             renderApp();
-            if (history.location.pathname === '/') {
-                history.push('/dashboard');
+            try {
+                if (history.location.pathname === '/') {
+                    history.push('/dashboard');
+                }
+            } catch (error) {
+                console.log(error);
             }
+            
         });
     } else {
         store.dispatch(logout());

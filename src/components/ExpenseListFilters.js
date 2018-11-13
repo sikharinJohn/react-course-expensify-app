@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
+import { FormattedMessage } from 'react-intl';
 import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
 
 export class ExpenseListFilters extends React.Component {
@@ -31,13 +32,17 @@ export class ExpenseListFilters extends React.Component {
             <div className="content-container">
                 <div className="input-group">
                     <div className="input-group__item" >
-                        <input
-                            type="text"
-                            className="text-input"
-                            value={this.props.filters.text}
-                            onChange={this.onTextChange}
-                            placeholder="Search expenses"
-                        />
+                        <FormattedMessage id="filters.search.expenses" >
+                            {(txt) => (
+                                <input
+                                    type="text"
+                                    className="text-input"
+                                    value={this.props.filters.text}
+                                    onChange={this.onTextChange}
+                                    placeholder={txt}
+                                />
+                            )}
+                        </FormattedMessage>
                     </div>
                     <div className="input-group__item">
                         <select
@@ -45,9 +50,24 @@ export class ExpenseListFilters extends React.Component {
                             value={this.props.filters.sortBy}
                             onChange={this.onSortChange}
                         >
-                            <option value="date">Date</option>
-                            <option value="amount">Amount</option>
-                        </select></div>
+                            <FormattedMessage id="filters.date" >
+                                {(txt) => (
+                                    <option value="date">
+                                        {txt}
+                                    </option>
+
+                                )}
+                            </FormattedMessage>
+                            <FormattedMessage id="filters.amount" >
+                                {(txt) => (
+                                    <option value="amount">
+                                        {txt}
+                                    </option>
+
+                                )}
+                            </FormattedMessage>
+                        </select>
+                    </div>
                     <div className="input-group__item">
                         <DateRangePicker
                             startDate={this.props.filters.startDate}

@@ -1,0 +1,23 @@
+{
+    "header.logout": "ออกจากระบบ",
+    "summary.add-button": "เพิ่มรายจ่าย",
+    "summary.text": "จำนวนรายจ่าย {expensesCount} รายการ รวม {expensesTotal}",
+    "summary.text-hidden": "ซ่อน {hiddenCount} รายการ โดยการกรอง",
+    "filters.search.expenses": "ค้นหารายจ่าย",
+    "filters.date": "วันที่",
+    "filters.amount": "จำนวนเงิน",
+    "expense-list.expenses": "รายจ่าย",
+    "expense-list.expense": "รายจ่าย",
+    "expense-list.amount": "จำนวนเงิน",
+    "expense-list.emtry": "ไม่มีรายจ่าย",
+    "expense-add.button": "เพิ่มรายการจ่าย",
+    "expense-form.description": "รายละเอียด",
+    "expense-form.amount": "จำนวนเงิน",
+    "expense-form.note": "ข้อความเพิ่มเติมของรายจ่าย (ถ้ามี)",
+    "expense-form.invalid": "กรุณาระบุรายละเอียดและจำนวนเงิน",
+    "expense-edit": "แก้ไขรายจ่าย",
+    "expense-remove.button": "ลบรายจ่าย",
+    "exepense-remove.title": "คุณต้องการลบรายการจ่ายนี้หรือไม่?",
+    "modal.yes": "ใช่",
+    "modal.no": "ไม่"
+}

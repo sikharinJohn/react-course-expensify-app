@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+import { FormattedMessage } from 'react-intl';
 import DropdownList from './DropdownList';
 import types from '../models/expense-types';
 
@@ -27,7 +28,7 @@ export default class ExpenseForm extends React.Component {
         const type = selectedType.value;
         this.setState(() => ({ type }));
     }
-    
+
     onNoteChange = (e) => {
         const note = e.target.value;
         this.setState(() => ({ note }));
@@ -66,29 +67,46 @@ export default class ExpenseForm extends React.Component {
     render() {
         return (
             <form className="form" onSubmit={this.onSubmit}>
-                {this.state.error && <p className="form__error"> {this.state.error}</p>}
-                <input
-                    type="text"
-                    placeholder="Description"
-                    autoFocus
-                    className="text-input"
-                    value={this.state.description}
-                    onChange={this.onDescriptionChange}
-                />
-                <DropdownList 
+                {this.state.error &&
+                    <FormattedMessage id="expense-form.invalid" defaultMessage="expense-form.invalid">
+                        {(txt) => (
+                            <p className="form__error"> {txt}</p>
+                        )}
+                    </FormattedMessage>
+                }
+                <FormattedMessage id="expense-form.description" defaultMessage="Description">
+                    {(txt) => (
+                        <input
+                            type="text"
+                            placeholder={txt}
+                            autoFocus
+                            className="text-input"
+                            value={this.state.description}
+                            onChange={this.onDescriptionChange}
+                        />
+                    )}
+                </FormattedMessage>
+
+                <DropdownList
                     types={types}
                     value={this.state.type}
                     handleChange={this.onTypeChange}
                     selectedValue={this.state.type}
                 />
-                <input
-                    type="text"
-                    placeholder="Amount"
-                    className="text-input"
-                    value={this.state.amount}
-                    onChange={this.onAmountChange}
 
-                />
+                <FormattedMessage id="expense-form.amount" defaultMessage="Amount">
+                    {(txt) => (
+                        <input
+                            type="text"
+                            placeholder={txt}
+                            className="text-input"
+                            value={this.state.amount}
+                            onChange={this.onAmountChange}
+
+                        />
+                    )}
+                </FormattedMessage>
+
                 <SingleDatePicker
                     date={this.state.createdAt}
                     onDateChange={this.onDateChange}
@@ -97,15 +115,25 @@ export default class ExpenseForm extends React.Component {
                     numberOfMonths={1}
                     isOutsideRange={() => false}
                 />
-                <textarea
-                    placeholder="Add a note for your expense (optional)"
-                    value={this.state.note}
-                    className="textarea"
-                    onChange={this.onNoteChange}
-                >
-                </textarea>
+                <FormattedMessage id="expense-form.note" defaultMessage="Add a note for your expense (optional)">
+                    {(txt) => (
+                        <textarea
+                            placeholder={txt}
+                            value={this.state.note}
+                            className="textarea"
+                            onChange={this.onNoteChange}
+                        >
+                        </textarea>
+                    )}
+                </FormattedMessage>
                 <div>
-                    <button className="button">Add Expense</button>
+                    <FormattedMessage id="expense-add.button" defaultMessage="Add Expense">
+                        {(txt) => (
+                            <button className="button">{txt}</button>
+                        )}
+                    </FormattedMessage>
+
+
                 </div>
 
             </form>

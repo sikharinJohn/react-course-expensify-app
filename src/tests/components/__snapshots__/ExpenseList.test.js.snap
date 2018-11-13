@@ -10,17 +10,32 @@ exports[`should render ExpenseList with empty message 1`] = `
     <div
       className="show-for-mobile"
     >
-      Expenses
+      <FormattedMessage
+        defaultMessage="Expenses"
+        id="expense-list.expenses"
+        values={Object {}}
+      />
+       
     </div>
     <div
       className="show-for-desktop"
     >
-      Expense
+      <FormattedMessage
+        defaultMessage="Expense"
+        id="expense-list.expense"
+        values={Object {}}
+      />
+        
     </div>
     <div
       className="show-for-desktop"
     >
-      Amount
+      <FormattedMessage
+        defaultMessage="Amount"
+        id="expense-list.amount"
+        values={Object {}}
+      />
+       
     </div>
   </div>
   <div
@@ -30,7 +45,12 @@ exports[`should render ExpenseList with empty message 1`] = `
       className="list-item list-item--message"
     >
       <span>
-         No expenses
+        <FormattedMessage
+          defaultMessage="No expenses"
+          id="expense-list.emtry"
+          values={Object {}}
+        />
+          
       </span>
     </div>
   </div>
@@ -47,17 +67,32 @@ exports[`should render ExpenseList with expenses 1`] = `
     <div
       className="show-for-mobile"
     >
-      Expenses
+      <FormattedMessage
+        defaultMessage="Expenses"
+        id="expense-list.expenses"
+        values={Object {}}
+      />
+       
     </div>
     <div
       className="show-for-desktop"
     >
-      Expense
+      <FormattedMessage
+        defaultMessage="Expense"
+        id="expense-list.expense"
+        values={Object {}}
+      />
+        
     </div>
     <div
       className="show-for-desktop"
     >
-      Amount
+      <FormattedMessage
+        defaultMessage="Amount"
+        id="expense-list.amount"
+        values={Object {}}
+      />
+       
     </div>
   </div>
   <div
