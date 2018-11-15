@@ -2,15 +2,17 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
 import DropdownList from './DropdownList';
-import types from '../models/expense-types';
+import types_en from '../models/expense-types_en';
+import types_th from '../models/expense-types_th';
 
-export default class ExpenseForm extends React.Component {
+export  class ExpenseForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             description: props.expense ? props.expense.description : '',
-            type: props.expense ? props.expense.type : '',
+            type: props.expense ? props.expense.type : 0 ,
             note: props.expense ? props.expense.note : '',
             amount: props.expense ? (props.expense.amount / 100).toString() : '',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
@@ -88,7 +90,7 @@ export default class ExpenseForm extends React.Component {
                 </FormattedMessage>
 
                 <DropdownList
-                    types={types}
+                    types={this.props.types}
                     value={this.state.type}
                     handleChange={this.onTypeChange}
                     selectedValue={this.state.type}
@@ -141,3 +143,12 @@ export default class ExpenseForm extends React.Component {
         );
     }
 }
+
+
+const mapStateToProps = (state, props) => ({
+    types: state.locale.lang === 'en' ? types_en : types_th
+});
+
+
+
+export default connect(mapStateToProps)(ExpenseForm);

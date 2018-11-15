@@ -1,12 +1,13 @@
 import React from 'react';
 import Select from 'react-select';
 
-const DropdownList = (props) => (
+
+const DropdownList = (props) =>  (
     <Select
         options={props.types}
-        value={{label:  props.selectedValue, value:  props.selectedValue }}
+        value={{label: props.types[ props.selectedValue].label, value: props.types[props.selectedValue].value }}
         onChange={props.handleChange}
-        selectedValue={ props.selectedValue }
+        selectedValue={props.selectedValue}
     />
 );
 

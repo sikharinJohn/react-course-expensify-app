@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import th from 'react-intl/locale-data/th';
-
+import moment from 'moment';
+import momentJalali from 'moment-jalaali'
 import AppRouter, { history } from '../routers/AppRouter';
 
 import messages_en from "../translations/en.json";
@@ -22,6 +23,8 @@ const messages = {
 export class App extends Component {
  
     render() {
+        moment.locale(this.props.lang);
+        momentJalali.locale(this.props.lang);
         const { store, lang} = this.props;
         return (
             <IntlProvider

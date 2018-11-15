@@ -7,8 +7,10 @@ export class LocaleSwitcher extends Component {
     render() {
         return (
             <div  className="locale">
-                <button onClick={() => { this.props.setLocale('en') }} >EN</button>
-                <button onClick={() => { this.props.setLocale('th') }}>TH</button>
+                <button onClick={() => { this.props.setLocale('en');}}
+                >EN</button>
+                <button onClick={() => { this.props.setLocale('th'); }}
+                >TH</button>
             </div>
         
         )

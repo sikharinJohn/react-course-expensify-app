@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import { DateRangePicker } from 'react-dates';
 import { FormattedMessage } from 'react-intl';
 import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
@@ -9,8 +10,8 @@ export class ExpenseListFilters extends React.Component {
         calendarFocused: null
     };
     onDatesChange = ({ startDate, endDate }) => {
-        this.props.setStartDate(startDate);
-        this.props.setEndDate(endDate);
+        this.props.setStartDate(moment(startDate));
+        this.props.setEndDate(moment(endDate));
     };
     onFocusChange = (calendarFocused) => {
         this.setState(() => ({ calendarFocused }));
@@ -28,6 +29,7 @@ export class ExpenseListFilters extends React.Component {
     };
 
     render() {
+        moment.locale('th_TH');
         return (
             <div className="content-container">
                 <div className="input-group">
@@ -78,7 +80,11 @@ export class ExpenseListFilters extends React.Component {
                             showClearDates={true}
                             numberOfMonths={1}
                             isOutsideRange={() => false}
+                            monthFormat={'MMMM YYYY'}
+
                         />
+
+                        
                     </div>
 
                 </div>
@@ -90,7 +96,8 @@ export class ExpenseListFilters extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    filters: state.filters
+    filters: state.filters,
+    lang: state.locale.lang  
 });
 
 const mapDispatchToProps = (dispatch) => ({
