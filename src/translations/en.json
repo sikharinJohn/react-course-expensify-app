@@ -6,6 +6,8 @@
     "filters.search.expenses": "Search expenses",
     "filters.date": "Date",
     "filters.amount": "Amount",
+    "filters.start-date": "Start Date",
+    "filters.end-date": "End Date",
     "expense-list.expenses": "Expenses",
     "expense-list.expense": "Expense",
     "expense-list.amount": "Amount",

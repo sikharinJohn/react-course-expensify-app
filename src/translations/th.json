@@ -6,6 +6,8 @@
     "filters.search.expenses": "ค้นหารายจ่าย",
     "filters.date": "วันที่",
     "filters.amount": "จำนวนเงิน",
+    "filters.start-date": "วัน-เดือน-ปี",
+    "filters.end-date": "วัน-เดือน-ปี",
     "expense-list.expenses": "รายจ่าย",
     "expense-list.expense": "รายจ่าย",
     "expense-list.amount": "จำนวนเงิน",
